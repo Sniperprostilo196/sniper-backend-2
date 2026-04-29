@@ -1,10 +1,12 @@
 const express = require("express");
 const app = express();
 
+const PORT = process.env.PORT || 3000;
+
 app.get("/", (req, res) => {
-  res.send("FUNCIONANDO 🚀");
+  res.send("Servidor online 🚀");
 });
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log("Servidor rodando");
+app.listen(PORT, () => {
+  console.log("Rodando na porta " + PORT);
 });
